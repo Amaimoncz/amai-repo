@@ -1,3 +1,4 @@
 # amai-repo
 
-KOdi repository for Skins & addons
+Kodi repository for Skins & addons.
+
