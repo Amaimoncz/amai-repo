@@ -1,9 +1,16 @@
 <?xml version="1.0.0" encoding="UTF-8"?>
 <addon id="amai.repo" version="1.0.0" name="Amaimon Repository for Kodi" provider-name="Amaimon">
   <extension point="xbmc.addon.repository" name="Amaimon Repository for Kodi">
+    <dir minversion="17.9.0" maxversion="18.9.0">>
         <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v18_leia/zips/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v18_leia/zips/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v18_leia/zips/</datadir>
+    </dir>
+     <dir minversion="20.0.0" maxversion="20.9.9">
+        <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v20_nexus/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v20_nexus/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v20_nexus/zips/</datadir>
+    </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Repository Amaimon for Kodi</summary>
