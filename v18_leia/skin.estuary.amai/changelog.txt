@@ -1,0 +1,10 @@
+[B]1.0.5[/B]
+• Updated paths for widgets on Main screen
+
+[B]1.0.4[/B]
+• Updated poster view at widgets on Main screen
+• Updated fanart for Trakt widget
+• Updated CPU info
+
+﻿[B]0.0.1[/B]
+• Initial commit

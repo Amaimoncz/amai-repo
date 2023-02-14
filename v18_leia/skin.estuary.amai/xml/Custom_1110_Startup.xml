@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1110">
+<controls>
+  <control type="image"> <!-- Pozadí tapeta -->
+    <left>0</left>
+    <right>0</right>
+    <bottom>0</bottom>
+    <animation effect="fade" time="1000">WindowClose</animation>
+    <texture>startup/startup.jpg</texture>
+  </control>
+  <!-- Točící kolečko při spuštění -->
+  <control type="group" id="$PARAM[list_id]599">
+    <height>200</height>
+    <left>835</left>
+    <visible>true</visible>
+    <control type="image">
+      <top>320</top>
+      <width>250</width>
+      <height>250</height>
+      <aspectratio aligny="center">keep</aspectratio>
+      <texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+      <animation effect="fade" time="1000">WindowClose</animation>
+    </control>
+    <control type="image">
+      <top>320</top>
+      <width>250</width>
+      <height>250</height>
+      <aspectratio aligny="center">keep</aspectratio>
+      <texture colordiffuse="FF00bfff">dialogs/extendedprogress/loading.png</texture>
+      <animation effect="rotate" center="auto" start="360" end="0" time="1400" loop="true" condition="true">Conditional</animation>
+      <animation effect="fade" time="1000">WindowClose</animation>
+    </control>
+    <control type="label"> <!-- Nápis loading -->
+      <top>700</top>
+      <left>-835</left>
+      <width>1920</width>
+      <height>300</height>
+      <label>Loading</label>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>FF00bfff</textcolor>
+      <shadowcolor>ff000000</shadowcolor>
+      <font>WeatherTemp</font>
+      <animation effect="fade" time="1000">WindowClose</animation>
+    </control> <!-- Nápis loading -->
+  </control>
+<!-- Točící kolečko při spuštění -->
+</controls>
+</window>
