@@ -120,11 +120,11 @@
 				<control type="label" id="897"> <!-- Stream Cinema Community Movies Main Menu Widget -->
 					<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget)</visible>
 					<textoffsetx>25</textoffsetx>
-          <width>1920</width>
-          <height>70</height>
-          <font>font30_title</font>
-          <aligny>center</aligny>
-          <align>left</align>
+					<width>1920</width>
+					<height>70</height>
+					<font>font30_title</font>
+					<aligny>center</aligny>
+					<align>left</align>
 					<label>Widget SCC Filmy :</label>
 				</control>
 				<control type="button" id="802"><!-- Nastavení 1 widgetu SCC Filmy -->
@@ -159,11 +159,11 @@
 				<control type="label" id="898"> <!-- Stream Cinema Community Tv Shows Main Menu Widget -->
 					<visible>Skin.HasSetting(SCC_TVShow_MainMenuWidget)</visible>
 					<textoffsetx>25</textoffsetx>
-          <width>1920</width>
-          <height>70</height>
-          <font>font30_title</font>
-          <aligny>center</aligny>
-          <align>left</align>
+					<width>1920</width>
+					<height>70</height>
+					<font>font30_title</font>
+					<aligny>center</aligny>
+					<align>left</align>
 					<label>Widget SCC Serialy :</label>
 				</control>
 				<control type="button" id="805"><!-- Nastavení 1 widgetu SCC Serialy -->
