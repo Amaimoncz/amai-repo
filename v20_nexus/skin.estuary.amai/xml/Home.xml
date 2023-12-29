@@ -43,12 +43,12 @@
 					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 				</animation>
 				<include>OpenClose_Right</include>
-				<control type="group" id="5000">
+				<control type="group" id="5000">	<!-- Movies -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),movies)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="movies"/>
 					</include>
-					<control type="grouplist" id="5001">
+					<control type="grouplist" id="5001">	
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>5010</pagecontrol>
 						<include content="WidgetListCategories" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_categories_widget)">
@@ -76,13 +76,13 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5300"/>
 						</include>
-						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+						<!-- <include content="WidgetListPoster" condition="Library.HasContent(movies)">
 							<param name="content_path" value="special://skin/playlists/random_movies.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31006]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5400"/>
 						</include>
-						<!-- <include content="WidgetListCategories" condition="Library.HasContent(movies)">
+						<include content="WidgetListCategories" condition="Library.HasContent(movies)">
 							<param name="content_path" value="videodb://movies/genres/"/>
 							<param name="widget_header" value="$LOCALIZE[135]"/>
 							<param name="widget_target" value="videos"/>
@@ -111,7 +111,7 @@
 						<param name="scrollbar_id" value="5010"/>
 					</include>
 				</control>
-				<control type="group" id="6000">
+				<control type="group" id="6000">	<!-- TV Shows -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),tvshows)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="tvshows"/>
@@ -185,7 +185,7 @@
 						<param name="scrollbar_id" value="6010"/>
 					</include>
 				</control>
-				<control type="group" id="7000">
+				<control type="group" id="7000">	<!-- Music -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),music)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="music"/>
@@ -265,7 +265,7 @@
 						<param name="scrollbar_id" value="7010"/>
 					</include>
 				</control>
-				<control type="group" id="8000">
+				<control type="group" id="8000">	<!-- Addons -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),addons)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="addons"/>
@@ -347,7 +347,7 @@
 						<param name="scrollbar_id" value="8010"/>
 					</include>
 				</control>
-				<control type="group" id="11000">
+				<control type="group" id="11000">	<!-- Videos -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),video)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="video"/>
@@ -387,7 +387,7 @@
 						<param name="scrollbar_id" value="11010"/>
 					</include>
 				</control>
-				<control type="group" id="12000">
+				<control type="group" id="12000">	<!-- Live TV -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),livetv)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="livetv"/>
@@ -457,7 +457,7 @@
 						<param name="scrollbar_id" value="12010"/>
 					</include>
 				</control>
-				<control type="group" id="13000">
+				<control type="group" id="13000">	<!-- Radio -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),radio)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="radio"/>
@@ -527,7 +527,7 @@
 						<param name="scrollbar_id" value="13010"/>
 					</include>
 				</control>
-				<control type="group" id="14000">
+				<control type="group" id="14000">	<!-- Favorites -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),favorites)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="favorites"/>
@@ -582,7 +582,7 @@
 						<param name="scrollbar_id" value="14010"/>
 					</include>
 				</control>
-				<control type="group" id="15000">
+				<control type="group" id="15000">	<!-- Weather -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="weather"/>
@@ -690,7 +690,7 @@
 						<param name="scrollbar_id" value="15010"/>
 					</include>
 				</control>
-				<control type="group" id="16000">
+				<control type="group" id="16000">	<!-- Music Videos -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),musicvideos)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="musicvideos"/>
@@ -782,7 +782,7 @@
 						<param name="scrollbar_id" value="16010"/>
 					</include>
 				</control>
-				<control type="group" id="4000">
+				<control type="group" id="4000">	<!-- Pictures -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),pictures)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="pictures"/>
@@ -798,7 +798,7 @@
 						</include>
 					</control>
 				</control>
-				<control type="group" id="17000">
+				<control type="group" id="17000">	<!-- Games -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),games)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="games"/>
@@ -828,7 +828,222 @@
 						<param name="scrollbar_id" value="17010"/>
 					</include>
 				</control>
-				<control type="group" id="21000">
+				<control type="group" id="18000"> 	<!-- Zobrazení systémových informací -->
+					<visible>Control.HasFocus(802) + Skin.HasSetting(show_sys_info) </visible> 	<!-- podmínka pro zobrazení widgetu -->
+					<include>OpenClose_Right</include>
+					<include>Visible_Right</include>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="802"/>
+					</include>
+					<top>130</top>
+					<control type="group">
+						<left>-20</left>
+						<right>-20</right>
+						<control type="image">
+							<texture colordiffuse="FFFFFFFF">lists/panel.png</texture>
+							<bordertexture border="21">overlays/back.png</bordertexture>
+							<bordersize>20</bordersize>
+							<left>0</left>
+							<right>0</right>
+							<top>-10%</top>
+							<height>120%</height>
+						</control>
+						<control type="group">
+							<top>-100</top>
+							<control type="label"> 	<!-- Version info label -->
+								<top>150</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<textcolor>button_focus</textcolor>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[UPPERCASE]• $LOCALIZE[31031] •[/UPPERCASE]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- System Version info label + System build date -->
+								<top>200</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>KODI $INFO[System.BuildVersion] - $INFO[System.BuildDate]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- Skin  info label -->
+								<top>240</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[166][/COLOR] :  Estuary-Amaimon Mod   • $INFO[System.AddonVersion(skin.estuary.amai.leia),  $LOCALIZE[24051] ]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- Kernel info label -->
+								<top>280</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>$INFO[System.KernelVersion]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- System info label -->
+								<top>350</top>
+								<align>center</align>
+								<height>30</height>
+								<textoffsety>10</textoffsety>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>button_focus</textcolor>
+								<label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- Screen resolution label -->
+								<top>410</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[13287][/COLOR] $INFO[System.ScreenResolution]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- System Uptime label -->
+								<top>450</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[12390]:[/COLOR] [LOWERCASE]$INFO[System.Uptime][/LOWERCASE]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- System Total Uptime info label -->
+								<top>490</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[12394]:[/COLOR] [LOWERCASE]$INFO[System.TotalUptime][/LOWERCASE]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- Network info label -->
+								<top>530</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[150] :[/COLOR] $INFO[Network.IPAddress]         [COLOR button_focus] $LOCALIZE[149] :[/COLOR] $INFO[Network.MACAddress] </label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label"> 	<!-- CPU a Memory info label -->
+								<top>610</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font36_title</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<textcolor>button_focus</textcolor>
+								<label>[UPPERCASE]•  $LOCALIZE[32121]  •[/UPPERCASE]</label>
+							</control>
+							<control type="label"> 	<!-- Využití CPU  label -->
+								<top>680</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[32122] :[/COLOR] $INFO[System.CPUUsage]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="progress"> 	<!-- Využití CPU  progress bar -->
+								<top>730</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>26</height>
+								<info>System.CPUUsage</info>
+								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,0)</visible> 		<!-- Využití CPU -->
+							</control>
+							<control type="label"> 	<!-- Využití paměti label -->
+								<top>790</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[31030] :[/COLOR] $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="progress"> 	<!-- Využití paměti progress bar -->
+								<top>840</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>26</height>
+								<info>system.memory(used)</info>
+							</control>
+							<control type="label"> <!-- Teplota CPU label -->
+								<top>900</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[32123] :[/COLOR] $INFO[System.CPUTemperature]$INFO[System.TemperatureUnits]</label>
+								<scroll>true</scroll>
+								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,1)</visible>
+							</control>
+							<control type="progress"> 	<!-- Teplota CPU Progress bar -->
+								<top>950</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>26</height>
+								<info>System.CPUTemperature</info>
+								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,1)</visible> <!-- Teplota CPU -->
+							</control>
+							<control type="label"> <!-- Teplota GPU label -->
+								<top>1010</top>
+								<align>center</align>
+								<height>30</height>
+								<font>font14</font>
+								<left>20</left>
+								<right>20</right>
+								<shadowcolor>text_shadow</shadowcolor>
+								<label>[COLOR button_focus]$LOCALIZE[32124] :[/COLOR] $INFO[System.GPUTemperature]$INFO[System.TemperatureUnits]</label>
+								<scroll>true</scroll>
+								<visible>Integer.IsGreaterOrEqual()(System.GPUTemperature,1)</visible>
+							</control>
+							<control type="progress"> 	<!-- Teplota GPU Progress bar -->
+								<top>1060</top>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>26</height>
+								<info>System.GPUTemperature</info>
+								<visible>Integer.IsGreaterOrEqual()(System.GPUTemperature,1)</visible>
+							</control>
+						</control>
+					</control>
+				</control>
+				<control type="group" id="21000">	<!-- Disc -->
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),disc)</visible>
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="disc"/>
@@ -917,7 +1132,7 @@
 						<pagecontrol>54010</pagecontrol>
 						<include>WidgetGroupListCommonNextUp</include>
 						<include content="WidgetWallEpisodeNextUp" condition="true">
-							<param name="content_path" value="plugin://script.skin.helper.widgets/?action=next&mediatype=episodes&reload=$INFO[Window(Home).Property(widgetreload-episodes)]"/>
+							<param name="content_path" value="plugin://script.skin.helper.widgets/?action=next&mediatype=episodes&reload=$INFO[Window(Home).Property(widgetreload)]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="54100"/>
 						</include>

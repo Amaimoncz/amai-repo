@@ -34,14 +34,24 @@
 				</include>
 				<control type="group">
 					<width>550</width>
-					<control type="textbox">
+					<control type="textbox">	<!-- Main Title on left with year -->
 						<top>120</top>
 						<left>30</left>
 						<width>550</width>
 						<aligny>center</aligny>
 						<height>110</height>
 						<font>font36_title</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[COLOR gold]$INFO[ListItem.Label][/COLOR] [COLOR grey]($INFO[ListItem.year])[/COLOR] </label>
+					</control>
+					<control type="textbox"> 	<!-- Main Title on left without year -->
+						<visible>!ListItem.IsParentFolder + String.IsEmpty(ListItem.year) | String.IsEqual(ListItem.DbType, season) | String.IsEqual(ListItem.DbType,episode)</visible>
+						<top>120</top>
+						<left>30</left>
+						<width>550</width>
+						<aligny>center</aligny>
+						<height>110</height>
+						<font>font36_title</font>
+						<label>[COLOR gold]$INFO[ListItem.Label][/COLOR]</label>
 					</control>
 					<control type="textbox">
 						<left>30</left>
@@ -124,7 +134,7 @@
 						<selected>system.ismaster</selected>
 						<visible>system.haslocks</visible>
 					</control>
-					<control type="togglebutton" id="619">
+					<control type="togglebutton" id="619">	<!-- Update library -->
 						<description>Update library</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
@@ -132,6 +142,13 @@
 						<visible>!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</visible>
 						<altlabel>$LOCALIZE[13353]</altlabel>
 						<usealttexture>library.isscanningvideo</usealttexture>
+					</control>
+					<control type="togglebutton" id="620"> 	<!-- Clean library -->
+						<description>Clean library</description>
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[32125]</label>
+						<onclick>CleanLibrary(video)</onclick>
+						<visible>!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="button" id="612">
 						<description>Go to playlist</description>

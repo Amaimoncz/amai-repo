@@ -104,7 +104,45 @@
 		<label></label>
 		<font></font>
 	</include>
-	<include name="RatingCircle">
+	<include name="Badge_Rating"> <!-- Hodnocení odznak -->
+		<param name="animation">False</param>
+		<definition>
+			<control type="group">
+				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
+				<include content="UserRatingContent" condition="Skin.HasSetting(badge_userrating)">
+					<param name="infolabel" value="ListItem.UserRating" />
+				</include>
+				<include content="UserRatingContent" condition="Skin.HasSetting(badge_rating)">
+					<param name="infolabel" value="ListItem.Rating" />
+				</include>
+			</control>
+		</definition>
+	</include>
+	<include name="Circle_Rating"> <!-- Hodnocení u widgetů  v kolečku -->
+      <control type="image">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <top>-9</top>
+        <left>-10</left>
+        <height>70</height>
+        <width>70</width>
+        <texture background="true" colordiffuse="button_focus">rating_bg.png</texture>
+      </control>
+      <control type="label">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+				<top>-9</top>
+				<left>-10</left>
+		   	<width>70</width>
+       	<height>70</height>
+       	<textcolor>white</textcolor>
+			 	<label>$INFO[ListItem.Rating]</label>
+			 	<font>font25_title</font>
+			 	<shadowcolor>text_shadow</shadowcolor>
+		   	<align>center</align>
+       	<aligny>center</aligny>
+		  </control>
+    </include> <!-- hodnocení u widgetů v kolečku -->
+
+	<!-- <include name="RatingCircle">
 		<param name="animation">False</param>
 		<definition>
 			<control type="group">
@@ -117,7 +155,7 @@
 				</include>
 			</control>
 		</definition>
-	</include>
+	</include> -->
 	<include name="UserRatingContent">
 		<visible>!String.IsEmpty($PARAM[infolabel])</visible>
 		<control type="image">
@@ -139,6 +177,81 @@
 			<label>$INFO[$PARAM[infolabel]]</label>
 		</control>
 	</include>
+		<include name="Tag_Rating"> 	<!-- Hodnocení štítek -->
+		<visible>!String.IsEmpty(ListItem.Rating)</visible>
+		<control type="image">
+			<top>17</top>
+			<left>73</left>
+			<width>78</width>
+			<height>78</height>
+			<texture colordiffuse="button_focus">ratings/tag_rating/tag.png</texture>
+		</control>
+		<control type="label">
+			<top>18</top>
+			<left>125</left>
+			<width>78</width>
+			<height>78</height>
+			<angle>-45</angle>
+			<textcolor>white</textcolor>
+			<font>font25_title</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<label>$INFO[ListItem.Rating]</label>
+		</control>
+	</include>
+	<include name="Tag_Rating_List"> 	<!-- Hodnocení štítek -->
+		<visible>!String.IsEmpty(ListItem.Rating)</visible>
+		<control type="image">
+			<top>-88</top>
+			<right>37</right>
+			<width>108</width>
+			<height>108</height>
+			<texture flipy="true" colordiffuse="button_focus">ratings/tag_rating/tag.png</texture>
+		</control>
+		<control type="label">
+			<top>-20</top>
+			<left>240</left>
+			<angle>45</angle>
+			<textcolor>white</textcolor>
+			<font>font30_title</font>
+			<shadowcolor>text_shadow</shadowcolor>
+			<label>$INFO[ListItem.Rating]</label>
+		</control>
+	</include>
+	<include name="Star_Rating"> 	<!-- Hodnocení hvězdy -->
+		<visible>!String.IsEmpty(ListItem.Rating)</visible>
+		<control type="image">
+				<top>17</top>
+				<left>-100</left>
+				<width>250</width>
+				<height>100</height>
+				<texture flipy="true">overlays/overlayfade.png</texture>
+			</control>
+			<control type="image">
+				<left>-45</left>
+				<top>18</top>
+				<height>25</height>
+				<width>140</width>
+				<texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
+			</control>
+	</include>
+	<include name="Star_Rating_List"> 	<!-- Hodnocení hvězdy -->
+		<visible>!String.IsEmpty(ListItem.Rating)</visible>
+		<control type="image">
+			<bottom>124</bottom>
+			<left>-252</left>
+			<width>560</width>
+			<height>150</height>
+			<texture>overlays/overlayfade.png</texture>
+		</control>
+		<control type="image">
+			<left>-60</left>
+			<bottom>124</bottom>
+			<height>45</height>
+			<width>190</width>
+			<texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
+		</control>
+	</include>
+
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>

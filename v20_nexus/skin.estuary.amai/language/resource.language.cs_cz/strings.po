@@ -647,37 +647,37 @@ msgstr "Nastavení související s grafikou alb."
 #. Label for OSD settings category
 msgctxt "#31170"
 msgid "On screen display"
-msgstr ""
+msgstr "On screen display"
 
 #. Helper text for the label of OSD settings category
 msgctxt "#31171"
 msgid "On screen display (OSD) related settings"
-msgstr ""
+msgstr "On screen display (OSD) related settings"
 
 #. Setting Automatically close video OSD
 msgctxt "#31172"
 msgid "Automatically close video OSD"
-msgstr ""
+msgstr "Automatically close video OSD"
 
 #. Setting auto close time for video osd
 msgctxt "#31173"
 msgid "Video OSD autoclose time (seconds)"
-msgstr ""
+msgstr "Video OSD autoclose time (seconds)"
 
 #. Setting to control what happens when clicking a music album on the home screen
 msgctxt "#31174"
 msgid "Default select action for albums on the home screen"
-msgstr ""
+msgstr "Default select action for albums on the home screen"
 
 #. Setting to control what happens when clicking a TV show on the home screen
 msgctxt "#31175"
 msgid "Default select action for TV shows on the home screen"
-msgstr ""
+msgstr "Default select action for TV shows on the home screen"
 
 #. Setting to control what happens when clicking a movie set on the home screen
 msgctxt "#31176"
 msgid "Default select action for movie sets on the home screen"
-msgstr ""
+msgstr "Default select action for movie sets on the home screen"
 
 # empty strings from id 31170 to 31599
 #. Label to show the video codec name

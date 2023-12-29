@@ -345,10 +345,13 @@
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
-			<control type="group">
+			<control type="group">	<!-- Zobrazeni hodnoceni badge, circle, star -->
 				<left>135</left>
 				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include> 	<!-- Původní hodnocení -->
+				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> 	<!-- Hodnocení v kolečku u widgetů -->
+				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include> 	<!-- Hodnocení hvězdy -->
+				<include condition="Skin.HasSetting(tag_rating)">Tag_Rating</include> 	<!-- Hodnocení hvězdy -->
 			</control>
 			<control type="progress">
 				<left>35</left>
