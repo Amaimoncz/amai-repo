@@ -470,7 +470,7 @@
 			</control>
 		</control>
 	</include>
-	<!-- Amaimon upravy -->
+<!-- Amaimon upravy -->
 	<include name="InfoWallEpisodeLayoutNextUp"> 	<!-- Widget pro NextUp -->
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>

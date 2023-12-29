@@ -747,3 +747,133 @@ msgstr "Systém"
 #~ msgctxt "#31138"
 #~ msgid "Player process info"
 #~ msgstr "Informace o zpracování přehrávače"
+
+#  AMAIMON
+
+msgctxt "#32000"
+msgid "Rating Circle"
+msgstr "Hodnocení kruh"
+
+msgctxt "#32001"
+msgid "Rating Star"
+msgstr "Hodnocení hvězdy"
+
+msgctxt "#32002"
+msgid "Setting widgets on the main screen"
+msgstr "Nastavení widgetů na hlavní obrazovce"
+
+msgctxt "#32003"
+msgid "Setting widget content SCC Movies"
+msgstr "Nastavení obsahu widgetu SCC - Filmy"
+
+msgctxt "#32004"
+msgid "News"
+msgstr "Novinky"
+
+msgctxt "#32005"
+msgid "News dubbed - CZ"
+msgstr "Novinky dabované - CZ"
+
+msgctxt "#32006"
+msgid "News with subtitles"
+msgstr "Novinky s titulky"
+
+msgctxt "#32007"
+msgid "Last added"
+msgstr "Poslední přidané"
+
+msgctxt "#32008"
+msgid "TV tips today"
+msgstr "TV Tipy dnes"
+
+msgctxt "#32010"
+msgid "Trends"
+msgstr "Trendy"
+
+msgctxt "#32011"
+msgid "Popular"
+msgstr "Populární"
+
+msgctxt "#32012"
+msgid "Most watched"
+msgstr "Nejsledovanější"
+
+msgctxt "#32100"
+msgid "Widget Settings"
+msgstr "Nastavení Widgetů"
+
+msgctxt "#32101"
+msgid "SCC - Movies"
+msgstr "SCC - Filmy"
+
+msgctxt "#32102"
+msgid "SCC - TV Shows"
+msgstr "SCC - Seriály"
+
+msgctxt "#32103"
+msgid "Anime"
+msgstr "Anime"
+
+msgctxt "#32104"
+msgid "Rating Circle"
+msgstr "Hodnocení kruh"
+
+msgctxt "#32105"
+msgid "Rating Star"
+msgstr "Hodnocení hvězdy"
+
+msgctxt "#32106"
+msgid "Tag rating"
+msgstr "Hodnocení štítek"
+
+msgctxt "#32110"
+msgid "Widget NextUp ->"
+msgstr "Widget NextUp ->"
+
+msgctxt "#32111"
+msgid "Next episodes to watch"
+msgstr "Další epizody ke shlednutí"
+
+msgctxt "#32112"
+msgid "Recent unwatched Tv Shows"
+msgstr "Nedávno přidané Seriály"
+
+msgctxt "#32113"
+msgid "Trakt.tv - TV Shows"
+msgstr "Trakt.tv - Seriály"
+
+msgctxt "#32114"
+msgid "Simple Shutdown Menu"
+msgstr "Jednoduché menu pro vypnutí"
+
+msgctxt "#32115"
+msgid "Reload Skin"
+msgstr "Znovu načíst Skin"
+
+msgctxt "#32120"
+msgid "System Information on HomeScreen"
+msgstr "Systémové informace na hlavní obrazovce"
+
+msgctxt "#32121"
+msgid "CPU & used Memory"
+msgstr "CPU a využití paměti"
+
+msgctxt "#32122"
+msgid "CPU Usage"
+msgstr "Využití CPU"
+
+msgctxt "#32123"
+msgid "CPU Temperature"
+msgstr "Teplota CPU"
+
+msgctxt "#32124"
+msgid "GPU Temperature"
+msgstr "Teplota GPU"
+
+msgctxt "#32125"
+msgid "Clean library"
+msgstr "Vyčistit knihovnu"
+
+msgctxt "#32126"
+msgid "Player Debug Info"
+msgstr "Player Debug Info"

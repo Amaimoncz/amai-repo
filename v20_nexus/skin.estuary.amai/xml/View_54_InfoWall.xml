@@ -162,12 +162,14 @@
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-			<control type="label">
+			<control type="label"> <!-- Popisek Sx / Ex -->
 				<left>31</left>
 				<top>178</top>
 				<width>260</width>
-				<label>$PARAM[thumb_label]</label>
+				<!-- <label>$PARAM[thumb_label]</label> -->
+				<label>S$INFO[ListItem.Season,, x E]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
+				<textcolor>gold</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 			</control>
@@ -191,17 +193,18 @@
 			</control>
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
-				<control type="label">
+				<control type="label"> <!-- Label TvShow name -->
 					<left>29</left>
 					<top>210</top>
 					<width>260</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
+					<textcolor>gold</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
-				<control type="label">
+				<control type="label">	<!-- Label Episode name -->
 					<left>29</left>
 					<top>240</top>
 					<width>260</width>
@@ -309,30 +312,31 @@
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-				<control type="image">
+				<control type="image"> <!-- shadow down-->
 					<left>35</left>
-					<top>320</top>
+					<top>310</top>
 					<width>250</width>
-					<height>50</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<height>60</height>
+					<texture colordiffuse="FCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
-				<control type="label">
-					<left>0</left>
+				<control type="label">	<!-- Popis dilu total / watched -->
+					<left>30</left>
 					<top>340</top>
 					<width>244</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
+					<textcolor>gold</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>right</align>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<left>254</left>
 					<top>343</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
-				</control>
+				</control> -->
 			</control>
 			<control type="image">
 				<left>35</left>
@@ -463,4 +467,164 @@
 			</control>
 		</control>
 	</include>
+<!-- Amaimon upravy -->
+	<include name="InfoWallEpisodeLayoutNextUp"> 	<!-- Widget pro NextUp -->
+		<param name="fallback_image">DefaultTVShows.png</param>
+		<param name="focused">false</param>
+		<definition>
+			<control type="image">
+				<top>10</top>
+				<width>550</width>
+				<height>370</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<top>5</top>
+				<left>-7</left>
+				<width>565</width>
+				<height>380</height>
+				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>$PARAM[focused]</visible>
+				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>10</top>
+				<width>550</width>
+				<height>300</height>
+				<texture fallback="$PARAM[fallback_image]" background="true">$INFO[Container($PARAM[container_id]).ListItem.Icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>220</top>
+				<width>510</width>
+				<height>70</height>
+				<texture>overlays/overlayfade.png</texture>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
+			<control type="label">
+				<left>240</left>
+				<top>250</top>
+				<width>280</width>
+				<label>S$INFO[ListItem.Season] x E$INFO[ListItem.Episode]</label>
+        <textcolor>gold</textcolor>
+				<font>font25_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<align>right</align>
+			</control>
+			<control type="group">
+				<visible>!Window.IsActive(videos)</visible>
+				<control type="label">
+					<left>20</left>
+					<top>285</top>
+					<width>510</width>
+          <textcolor>gold</textcolor>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<font>font30_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<left>20</left>
+					<top>325</top>
+					<width>510</width>
+          <textcolor>white</textcolor>
+					<label> - $INFO[ListItem.Title] - </label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+			</control>
+			<control type="progress"> 	<!-- Progress bar shlédnuto/ Total -->
+				<left>20</left>
+				<top>253</top>
+				<width>276</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_white.png</midtexture>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoWall_Trakt"> 	<!-- Widget pro Trakt.tv -->
+		<param name="fallback_image">defaultmovies.png</param>
+		<param name="main_label">$INFO[ListItem.Artist]</param>
+		<param name="sub_label">$INFO[ListItem.Title]</param>
+		<param name="single_label">$INFO[ListItem.Label]</param>
+		<param name="focused">false</param>
+		<definition>
+			<control type="image"> <!-- Stín za položkou -->
+				<top>0</top>
+				<width>332</width>
+				<height>270</height>
+				<texture>dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<top>-4</top>
+				<left>-2</left>
+				<width>336</width>
+				<height>270</height>
+				<texture colordiffuse="button_focus">colors/grey.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>$PARAM[focused]</visible>
+				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+			</control>
+			<control type="image"> <!--fanart image -->
+				<left>5</left>
+				<top>-20</top>
+				<width>322</width>
+				<height>250</height>
+				<texture fallback="special://skin/extras/poster/uni_background.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio>keep</aspectratio>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="textbox">
+				<left>28</left>
+				<top>175</top>
+				<width>274</width>
+				<height>80</height>
+				<font>font12</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$PARAM[single_label]</label>
+				<visible>!String.IsEqual(ListItem.DBType,album)</visible>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(ListItem.DBType,album)</visible>
+				<control type="label">
+					<left>28</left>
+					<top>60</top>
+					<width>274</width>
+					<label>$PARAM[sub_label]</label>
+					<font>font10</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<left>28</left>
+					<top>60</top>
+					<width>274</width>
+					<label>$PARAM[main_label]</label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 </includes>
