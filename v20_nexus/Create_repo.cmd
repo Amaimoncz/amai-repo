@@ -1,1 +1,1 @@
-create_repository.py --datadir=zips/ skin.estuary.amai/
+create_repository.py --datadir=zips/ skin.estuary.amai/ script.skin.helper.widgets/
