@@ -1,4 +1,9 @@
-﻿[B]1.1.5[/B]
+﻿[B]1.1.7[/B]
+• Change Main Menu
+• add search for SCC
+• add reload skin
+
+[B]1.1.6[/B]
 • Change icon
 • fix skin settings
 

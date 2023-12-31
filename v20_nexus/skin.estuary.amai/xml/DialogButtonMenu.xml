@@ -27,6 +27,12 @@
 						<onclick>Powerdown()</onclick>
 						<visible>System.CanPowerDown</visible>
 					</item>
+					<item>	<!-- Reload Skin -->
+						<label>$LOCALIZE[32115]</label> 		
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<visible>true</visible>
+					</item>
+
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
