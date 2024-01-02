@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1111">
+	<onload>RunScript(special://skin/script/startupprogressbar.py)</onload>
+<controls>
+  <control type="image"> <!-- Pozadí tapeta -->
+    <left>0</left>
+    <right>0</right>
+    <bottom>0</bottom>
+    <animation effect="fade" time="1000">WindowClose</animation>
+    <texture>StartUp/StartUp_06.jpg</texture>
+  </control>
+</controls>
+</window>

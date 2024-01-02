@@ -106,6 +106,13 @@
 					<onclick>Skin.ToggleSetting(videoplayer_debug_mode)</onclick>
 					<selected>Skin.HasSetting(videoplayer_debug_mode)</selected>
 				</control>
+				<control type="radiobutton" id="714"><!-- aktivace delay při startu Kodi -->
+					<label>Delay on Start</label>
+					<include>DefaultSettingButton</include>
+					<onclick></onclick>
+					<onclick>Skin.ToggleSetting(delayAtStart)</onclick>
+					<selected>Skin.HasSetting(delayAtStart)</selected>
+				</control>
 			</control>
 			<control type="grouplist" id="800">	<!-- Nastaveni widgetu -->
 				<top>160</top>

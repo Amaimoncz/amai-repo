@@ -29,7 +29,7 @@
 					</item>
 					<item>	<!-- Reload Skin -->
 						<label>$LOCALIZE[32115]</label> 		
-						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>ReloadSkin()</onclick>
 						<visible>true</visible>
 					</item>
 

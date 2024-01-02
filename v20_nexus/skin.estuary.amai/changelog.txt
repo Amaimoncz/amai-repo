@@ -1,4 +1,7 @@
-﻿[B]1.1.7[/B]
+﻿[B]1.1.8[/B]
+• Add delay at start Kodi
+
+[B]1.1.7[/B]
 • Change Main Menu
 • add search for SCC
 • add reload skin

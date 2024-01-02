@@ -1484,7 +1484,7 @@
 					<texture>special://xbmc/media/vendor_logo.png</texture>
 				</control> -->
 			</control>
-						<control type="group"> <!-- WIDGET INFO -->
+			<control type="group"> <!-- WIDGET INFO -->
 				<left>0</left> 	<!-- Pozice pro widget info od praveho okraje -->
 				<visible>Control.HasFocus(5100) | Control.HasFocus(5200) | Control.HasFocus(5300) | Control.HasFocus(5400)
 					| Control.HasFocus(6100) | Control.HasFocus(6200) | Control.HasFocus(6300) | Control.HasFocus(50100) | Control.HasFocus(50200) | Control.HasFocus(50300)
