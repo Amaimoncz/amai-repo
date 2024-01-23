@@ -11,7 +11,7 @@ def update_progress_bar(percent):
 def main():
     for i in range(0, 101):
         update_progress_bar(i)
-        time.sleep(0.15)  # Simulace čekání na načítání
+        time.sleep(0.25)  # Simulace čekání na načítání
 
     dialog.close()
 

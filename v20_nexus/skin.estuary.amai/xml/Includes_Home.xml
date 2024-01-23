@@ -1133,7 +1133,9 @@
 				<include content="WidgetWallCommonNextUp">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="600" height="380">
+<!-- 				<itemlayout width="600" height="380">
+ -->				<itemlayout width="475" height="340">
+
 					<visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
 					<control type="group">
 					<left>68</left>
@@ -1143,7 +1145,7 @@
 					</include>
 			</control>
 				</itemlayout>
-				<focusedlayout width="600" height="380">
+				<focusedlayout width="475" height="340">
 					<visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
 					<control type="group">
 						<depth>DepthContentPopout</depth>

@@ -1,0 +1,12 @@
+
+
+
+ 			<!-- Stín pod nápisem -->
+ 			<control type="image"> 
+				<left>15</left>
+				<top>35</top>
+				<width>520</width>
+				<height>335</height>
+				<texture diffuse="special://skin/extras/diffuse_img/diffuse.png">overlays/overlayfade.png</texture>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>

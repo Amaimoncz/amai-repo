@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<includes>
+ <includes>
 	<include name="InfoWallPictureLayout">
 		<param name="focused">false</param>
 		<definition>
@@ -280,7 +280,7 @@
 			</control>
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-				<control type="image">
+				<control type="image" class="border_radius">
 					<left>11</left>
 					<top>-14</top>
 					<width>298</width>
@@ -475,72 +475,73 @@
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
 		<definition>
-			<control type="image">
+  			<control type="image"> <!-- black background -->
 				<top>10</top>
-				<width>550</width>
-				<height>370</height>
-				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<width>420</width>
+				<height>310</height>
+				<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png">dialogs/dialog-bg-nobo.png</texture>
+				<bordertexture border="5" diffuse="special://skin/extras/diffuse_img/diffuse.png">overlays/shadow.png</bordertexture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<bordersize>5</bordersize>
 			</control>
-			<control type="image">
-				<top>5</top>
-				<left>-7</left>
-				<width>565</width>
-				<height>380</height>
-				<texture colordiffuse="button_focus">colors/grey.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+  			<control type="image"> <!-- focus color background-->
+				<top>0</top>
+				<left>-10</left>
+				<width>440</width>
+				<height>330</height>
+				<texture colordiffuse="button_focus" diffuse="special://skin/extras/diffuse_img/diff_550x375.png">colors/grey.png</texture>
+				<bordertexture border="10" >overlays/shadow.png</bordertexture>
+				<bordersize>10</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
-			<control type="image">
-				<left>0</left>
-				<top>10</top>
-				<width>550</width>
-				<height>300</height>
-				<texture fallback="$PARAM[fallback_image]" background="true">$INFO[Container($PARAM[container_id]).ListItem.Icon]</texture>
-				<aspectratio>scale</aspectratio>
+			<control type="image"> <!-- picture -->
+				<left>-15</left>
+				<top>-6</top>
+				<width>450</width>
+				<height>260</height>
+				<texture fallback="$PARAM[fallback_image]" background="true" border="5" diffuse="special://skin/extras/diffuse_img/diff_550x375.png">$INFO[Container($PARAM[container_id]).ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
-			<control type="image">
-				<left>20</left>
-				<top>220</top>
-				<width>510</width>
-				<height>70</height>
-				<texture>overlays/overlayfade.png</texture>
+			<control type="image"> <!-- bottom shadow picture-->
+				<left>5</left>
+				<top>140</top>
+				<width>410</width>
+				<height>100</height>
+				<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png">overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-			<control type="label">
-				<left>240</left>
-				<top>250</top>
-				<width>280</width>
+			<control type="label"> <!-- Season x Episode -->
+				<left>0</left>
+				<top>200</top>
+				<width>400</width>
 				<label>S$INFO[ListItem.Season] x E$INFO[ListItem.Episode]</label>
-        <textcolor>gold</textcolor>
-				<font>font25_title</font>
+				<textcolor>gold</textcolor>
+				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 			</control>
-			<control type="group">
+			<control type="group">	<!-- Name TvShow & Name Episode -->
 				<visible>!Window.IsActive(videos)</visible>
-				<control type="label">
-					<left>20</left>
-					<top>285</top>
-					<width>510</width>
-          <textcolor>gold</textcolor>
+				<control type="label"> <!-- TvShow name label -->
+					<left>18</left>
+					<top>240</top>
+					<width>382</width>
+					<textcolor>gold</textcolor>
 					<label>$INFO[ListItem.TVShowTitle]</label>
-					<font>font30_title</font>
+					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
 				</control>
-				<control type="label">
-					<left>20</left>
-					<top>325</top>
-					<width>510</width>
-          <textcolor>white</textcolor>
+				<control type="label"> <!-- Episode name label -->
+					<left>8</left>
+					<top>275</top>
+					<width>402</width>
+					<textcolor>white</textcolor>
 					<label> - $INFO[ListItem.Title] - </label>
-					<font>font12</font>
+					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
@@ -548,14 +549,15 @@
 			</control>
 			<control type="progress"> 	<!-- Progress bar shlédnuto/ Total -->
 				<left>20</left>
-				<top>253</top>
+				<top>203</top>
 				<width>276</width>
-				<height>1</height>
+				<height>8</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
+
 		</definition>
 	</include>
 	<include name="InfoWall_Trakt"> 	<!-- Widget pro Trakt.tv -->
@@ -589,7 +591,7 @@
 				<top>-20</top>
 				<width>322</width>
 				<height>250</height>
-				<texture fallback="special://skin/extras/poster/uni_background.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<texture fallback="special://skin/extras/skin_back/background.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 			</control>

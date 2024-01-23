@@ -1,4 +1,10 @@
-﻿[B]1.1.8[/B]
+﻿[B]1.1.9[/B]
+• Edit time for delay at start Kodi 00:25 s
+• Change Next-up widget
+• fix shutdown simple Menu
+• fix trakt widget tvshows backgrounds
+
+[B]1.1.8[/B]
 • Add delay at start Kodi
 
 [B]1.1.7[/B]

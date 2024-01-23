@@ -25,39 +25,39 @@
 					<item>
 						<label>$LOCALIZE[13016]</label>
 						<onclick>Powerdown()</onclick>
-						<visible>System.CanPowerDown</visible>
+						<visible>System.CanPowerDown + !Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 					<item>	<!-- Reload Skin -->
 						<label>$LOCALIZE[32115]</label> 		
 						<onclick>ReloadSkin()</onclick>
-						<visible>true</visible>
+						<visible>Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 
 					<item>
 						<label>$LOCALIZE[20150]</label>
 						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-						<visible>!System.HasAlarm(shutdowntimer)</visible>
+						<visible>!System.HasAlarm(shutdowntimer) + !Skin.HasSetting(simple_shutdown_menu)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
+						<visible>System.HasAlarm(shutdowntimer) + !Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13011]</label>
 						<onclick>Suspend()</onclick>
-						<visible>System.CanSuspend</visible>
+						<visible>System.CanSuspend + !Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13010]</label>
 						<onclick>Hibernate()</onclick>
-						<visible>System.CanHibernate</visible>
+						<visible>System.CanHibernate + !Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[13013]</label>
 						<onclick>Reset()</onclick>
-						<visible>System.CanReboot</visible>
+						<visible>System.CanReboot  + !Skin.HasSetting(simple_shutdown_menu)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
