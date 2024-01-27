@@ -19,6 +19,8 @@
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
+	<include file="View_504_Amai_View.xml"/>
+	<include file="Includes_Amai.xml"/>
 	<include file="Variables.xml" />
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
@@ -201,15 +203,15 @@
 	<include name="Tag_Rating_List"> 	<!-- Hodnocení štítek -->
 		<visible>!String.IsEmpty(ListItem.Rating)</visible>
 		<control type="image">
-			<top>-88</top>
-			<right>37</right>
+			<top>-73</top>
+			<right>78</right>
 			<width>108</width>
 			<height>108</height>
 			<texture flipy="true" colordiffuse="button_focus">ratings/tag_rating/tag.png</texture>
 		</control>
 		<control type="label">
-			<top>-20</top>
-			<left>240</left>
+			<top>-2</top>
+			<left>230</left>
 			<angle>45</angle>
 			<textcolor>white</textcolor>
 			<font>font30_title</font>
