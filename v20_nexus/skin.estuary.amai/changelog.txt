@@ -1,4 +1,7 @@
 
+﻿[B]1.2.2[/B]
+• Fix Labels at widget Favourites
+
 ﻿[B]1.2.1[/B]
 • Fix Labels at widget Favourites
 • Fix delay on start
