@@ -33,26 +33,24 @@
 					<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 					<bordersize>20</bordersize>
 				</control>
-                <control type="image">  <!-- focus background -->
+                <control type="image">  <!-- focus label background -->
 					<left>10</left>
-					<top>275</top>
+					<top>300</top>
 					<width>330</width>
-					<height>115</height>
+					<height>90</height>
 					<texture colordiffuse="button_focus" diffuse="special://skin/extras/diffuse_img/diff_550x375.png">colors/grey.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-                <control type="textbox"> <!-- Focus Name Label -->    
+                <control type="label"> <!-- Focus Name Label -->    
                     <left>55</left>
-                    <top>258</top>
+                    <top>327</top>
                     <width>240</width>
-                    <height>150</height>
                     <font>font27</font>
                     <align>center</align>
-                    <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
-                    <autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
+                    <scroll>$[foPARAMcused]</scroll>
                     <visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
                 </control>       

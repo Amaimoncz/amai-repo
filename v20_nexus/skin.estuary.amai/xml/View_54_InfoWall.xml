@@ -242,7 +242,7 @@
 					<top>-10</top>
 					<width>290</width>
 					<height>400</height>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png">dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -251,7 +251,7 @@
 					<top>-10</top>
 					<width>290</width>
 					<height>400</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
+					<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png" colordiffuse="button_focus">colors/grey.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -273,7 +273,7 @@
 					<top>-1</top>
 					<width>272</width>
 					<height>270</height>
-					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png" fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
 				</control>
@@ -281,11 +281,11 @@
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				<control type="image" class="border_radius">
-					<left>11</left>
-					<top>-14</top>
-					<width>298</width>
-					<height>408</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
+					<left>8</left>
+					<top>-17</top>
+					<width>304</width>
+					<height>414</height>
+					<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png" colordiffuse="button_focus">colors/grey.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
@@ -296,7 +296,7 @@
 					<top>-10</top>
 					<width>290</width>
 					<height>400</height>
-					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+					<texture diffuse="special://skin/extras/diffuse_img/diff_550x375.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -317,7 +317,7 @@
 					<top>310</top>
 					<width>250</width>
 					<height>60</height>
-					<texture colordiffuse="FCFFFFFF">overlays/overlayfade.png</texture>
+					<texture  diffuse="special://skin/extras/diffuse_img/diff_550x375.png" colordiffuse="FCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="label">	<!-- Popis dilu total / watched -->
@@ -346,8 +346,8 @@
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">	<!-- Zobrazeni hodnoceni badge, circle, star -->
-				<left>135</left>
-				<top>-8</top>
+				<left>134</left>
+				<top>-7</top>
 				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include> 	<!-- Původní hodnocení -->
 				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> 	<!-- Hodnocení v kolečku u widgetů -->
 				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include> 	<!-- Hodnocení hvězdy -->
