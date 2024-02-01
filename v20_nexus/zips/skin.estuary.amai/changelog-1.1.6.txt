@@ -1,9 +1,0 @@
-﻿[B]1.1.5[/B]
-• Change icon
-• fix skin settings
-
-[B]1.1.5[/B]
-• Change icon
-
-﻿[B]1.1.0[/B]
-• Initial commit
