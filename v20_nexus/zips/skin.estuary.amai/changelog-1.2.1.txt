@@ -1,0 +1,33 @@
+
+﻿[B]1.2.1[/B]
+• Fix Labels at widget Favourites
+• Fix delay on start
+• Fix Poster view
+
+﻿[B]1.2.0[/B]
+• New widget for Favourites
+• Fix movie score vizualization
+
+﻿[B]1.1.9[/B]
+• Edit time for delay at start Kodi 00:25 s
+• Change Next-up widget
+• fix shutdown simple Menu
+• fix trakt widget tvshows backgrounds
+
+[B]1.1.8[/B]
+• Add delay at start Kodi
+
+[B]1.1.7[/B]
+• Change Main Menu
+• add search for SCC
+• add reload skin
+
+[B]1.1.6[/B]
+• Change icon
+• fix skin settings
+
+[B]1.1.5[/B]
+• Change icon
+
+﻿[B]1.1.0[/B]
+• Initial commit
