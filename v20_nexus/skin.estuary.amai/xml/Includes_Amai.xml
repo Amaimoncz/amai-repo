@@ -61,7 +61,7 @@
             <font>font_widget_main</font>
             <shadowcolor>text_shadow</shadowcolor>
             <visible>$PARAM[visible]</visible>
-            <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>  -->
+            <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
           </control>
         </definition>
     </include>

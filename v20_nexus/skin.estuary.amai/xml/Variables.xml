@@ -672,25 +672,25 @@
 <!-- Widget SCC Filmy -->
 		<!-- Cesty pro widget SCC Filmy -->
 	<variable name="SCC_MOVIES_TRENDS">		<!-- Cesty pro SCC Widget - Filmy -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253Dtrending%2526type%253Dmovie%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dmovie%2526sort%253Dtrending%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_POPULAR"> 	<!-- Popularni -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253Dpopularity%2526type%253Dmovie%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dmovie%2526sort%253Dpopularity%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_MOST_WATCHED"> 	<!-- Nejsledovanejsi -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253DplayCount%2526type%253Dmovie%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dmovie%2526sort%253DplayCount%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_NEWS"> 	<!-- Novinky -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fnews%253Fsort%253DdateAdded%2526size%253D100%2526type%253Dmovie%2526days%253D365%2526order%253Ddesc</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fnews%253Fdays%253D365%2526type%253Dmovie%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_NEWS_CZ"> 	<!-- Novinky dabovane -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsDubbed%253Flang%253Dcs%2526sort%253DlangDateAdded%2526size%253D100%2526type%253Dmovie%2526order%253Ddesc%2526days%253D730</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsDubbed%253Ftype%253Dmovie%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_NEWS_TIT"> 	<!-- Novinky s titulky -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsSubs%253Flang%253Dcs%2526sort%253DdateAdded%2526size%253D100%2526type%253Dmovie%2526days%253D450%2526order%253Ddesc</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsSubs%253Fdays%253D450%2526type%253Dmovie%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_LAST_ADD"> 	<!-- Posledni pridane -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253DdateAdded%2526type%253Dmovie%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=movie&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fdays%253D365%2526type%253Dmovie%2526sort%253DlastChildrenDateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_MOVIES_TV_TIPS"> 	<!-- TV Tipy -->
 		<value>plugin://plugin.video.stream-cinema-2-release/csfd_tips/</value>
@@ -770,28 +770,28 @@
 <!-- Widget SCC Serialy -->
 		<!-- Cesty pro widget SCC Serialy -->
 	<variable name="SCC_TVSHOWS_TRENDS">	<!-- Trendy -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253Dtrending%2526type%253Dtvshow%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dtvshow%2526sort%253Dtrending%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_POPULAR"> 	<!-- Popularni -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253Dpopularity%2526type%253Dtvshow%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dtvshow%2526sort%253Dpopularity%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_MOST_WATCHED"> 	<!-- Nejsledovanejsi -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253DplayCount%2526type%253Dtvshow%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dtvshow%2526sort%253DplayCount%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_NEWS"> 	<!-- Novinky -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fnews%253Fsort%253DdateAdded%2526size%253D100%2526type%253Dtvshow%2526days%253D365%2526order%253Ddesc</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fnews%253Fdays%253D365%2526type%253Dtvshow%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_NEWS_CZ">	 <!-- Novinky dabovane -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsDubbed%253Flang%253Dcs%2526sort%253DlangDateAdded%2526size%253D100%2526type%253Dtvshow%2526order%253Ddesc%2526days%253D730</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsDubbed%253Ftype%253Dtvshow%2526lang%253Dcs%2526sort%253DlangDateAdded%2526order%253Ddesc%2526days%253D730%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_NEWS_TIT"> 	<!-- Novinky s titulky -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsSubs%253Flang%253Dcs%2526sort%253DdateAdded%2526size%253D100%2526type%253Dtvshow%2526days%253D450%2526order%253Ddesc</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252FnewsSubs%253Fdays%253D450%2526type%253Dtvshow%2526lang%253Dcs%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_LAST_ADD"> 	<!-- Posledni pridane -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Fsort%253DdateAdded%2526type%253Dtvshow%2526order%253Ddesc%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fall%253Ftype%253Dtvshow%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 	<variable name="SCC_TVSHOWS_ANIME"> 	<!-- Anime -->
-		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fgenre%253Fsort%253Dyear%2526type%253Dtvshow%2526order%253Ddesc%2526value%253DAnime%2526size%253D100</value>
+		<value>plugin://plugin.video.stream-cinema-2-release/get_media/?media_type=anime-tvshow&amp;render_type=default&amp;url=%252Fapi%252Fmedia%252Ffilter%252Fv2%252Fnews%253Fdays%253D365%2526type%253Danime-tvshow%2526sort%253DdateAdded%2526order%253Ddesc%2526size%253D100</value>
 	</variable>
 <!-- Popisky pro widget SCC Serialy -->
 	<variable name="SCC_tvshows_widget1_label"><!-- Popisek pro 1 widget SCC Serialy -->

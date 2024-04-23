@@ -1,4 +1,8 @@
 
+﻿[B]1.2.3[/B]
+• Fix widgets paths
+• Change number items for widgets
+ 
 ﻿[B]1.2.2[/B]
 • Fix Labels at widget Favourites
 
