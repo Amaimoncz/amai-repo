@@ -51,7 +51,7 @@
 					<control type="group">
 						<left>68</left>
 						<top>10</top>
-						<include content="InfoWallMovieLayout">
+						<include content="InfoWallMovieLayout_Amai">
 							<param name="focused" value="false" />
 						</include>
 					</control>
@@ -67,7 +67,7 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
 						</animation>
-						<include content="InfoWallMovieLayout">
+						<include content="InfoWallMovieLayout_Amai">
 							<param name="focused" value="true" />
 						</include>
 					</control>
@@ -179,7 +179,7 @@
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="InfoWallEpisodeLayout_Amai">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
@@ -198,7 +198,7 @@
 						<animation type="Unfocus">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="230,120" />
 						</animation>
-						<include content="InfoWallEpisodeLayout">
+						<include content="InfoWallEpisodeLayout_Amai">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />

@@ -61,10 +61,10 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
-				<control type="button" id="706">
+				<control type="button" id="706">	<!-- setup ratings -->
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(31024, 38018|circle_userrating, 563|circle_rating, 16018|circle_none)</onclick>
+					<onclick>Skin.SelectBool(31024, 16018|circle_none, 563|badge_rating, 32106|tag_rating, 32104|circle_rating, 32105|star_rating, 38018|badge_userrating,)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
 				<control type="button" id="707">
@@ -73,6 +73,135 @@
 					<onclick>Skin.SelectBool(31164, 31165|show_profilename, 31166|show_profileavatar, 16018|show_none)</onclick>
 					<label2>$VAR[ProfileIdentificationLabel2Var]</label2>
 				</control>
+				<control type="image" id="799"> <!-- Line -->
+					<left>0</left>
+					<bottom>135</bottom>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control>
+				<control type="radiobutton" id="710"> <!-- System information -->
+					<label>$LOCALIZE[32120]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(show_sys_info)</onclick>
+					<selected>Skin.HasSetting(show_sys_info)</selected>
+				</control>
+				<control type="radiobutton" id="711"> <!-- Simple shutdown menu -->
+					<label>$LOCALIZE[32114]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(simple_shutdown_menu)</onclick>
+					<selected>Skin.HasSetting(simple_shutdown_menu)</selected>
+				</control>
+				<control type="radiobutton" id="712"><!-- Activation skin debug mode -->
+					<label>Skin Debug Mode</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleDebug</onclick>
+					<onclick>Skin.ToggleSetting(skin_debug_mode)</onclick>
+					<selected>Skin.HasSetting(skin_debug_mode)</selected>
+				</control>
+				<control type="radiobutton" id="713"><!-- Activation Player debug mode -->
+					<label>Video Player - Debug Mode</label>
+					<include>DefaultSettingButton</include>
+					<onclick></onclick>
+					<onclick>Skin.ToggleSetting(videoplayer_debug_mode)</onclick>
+					<selected>Skin.HasSetting(videoplayer_debug_mode)</selected>
+				</control>
+				<control type="radiobutton" id="714"><!-- Aktivation delay on startu Kodi -->
+					<label>Delay on Start</label>
+					<include>DefaultSettingButton</include>
+					<onclick></onclick>
+					<onclick>Skin.ToggleSetting(delayAtStart)</onclick>
+					<selected>Skin.HasSetting(delayAtStart)</selected>
+				</control>
+			</control>
+			<control type="grouplist" id="800">	<!-- Settings for widgets -->
+				<top>160</top>
+				<left>0</left>
+				<right>0</right>
+				<bottom>140</bottom>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>700</onup>
+				<ondown>700</ondown>
+				<visible>Container(9000).HasFocus(5)</visible>
+				<control type="label" id="897"> <!-- Stream Cinema Community Movies Main Menu Widget -->
+					<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget)</visible>
+					<textoffsetx>25</textoffsetx>
+					<width>1920</width>
+					<height>70</height>
+					<font>font30_title</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<label>Widget SCC Filmy :</label>
+				</control>
+				<control type="button" id="802"><!-- Setting widgetu 1 SCC Movies -->
+					<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget)</visible>
+					<label>     - 1.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends1, 32011|SCC_movies_popular1, 32012|SCC_movies_most_watch1, 32004|SCC_movies_news1, 32005|SCC_movies_news_cz1, 32006|SCC_movies_news_tit1, 32007|SCC_movies_last_added1, 32008|SCC_movies_tv_tips1, 16018|SCC_movies_none1)</onclick>
+					<label2>$VAR[SCC_movies_widget1_label]</label2>
+				</control>
+				<control type="button" id="803"><!-- Setting widgetu 2 SCC Movies -->
+					<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget) + !Skin.HasSetting(SCC_movies_none1)</visible>
+					<label>     - 2.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends2, 32011|SCC_movies_popular2, 32012|SCC_movies_most_watch2, 32004|SCC_movies_news2, 32005|SCC_movies_news_cz2, 32006|SCC_movies_news_tit2, 32007|SCC_movies_last_added2, 32008|SCC_movies_tv_tips2, 16018|SCC_movies_none2)</onclick>
+					<label2>$VAR[SCC_movies_widget2_label]</label2>
+				</control>
+				<control type="button" id="804"><!-- Setting widgetu 3 SCC Movies -->
+					<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget)+ !Skin.HasSetting(SCC_movies_none1) + !Skin.HasSetting(SCC_movies_none2)</visible>
+					<label>     - 3.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_movies_trends3, 32011|SCC_movies_popular3, 32012|SCC_movies_most_watch3, 32004|SCC_movies_news3, 32005|SCC_movies_news_cz3, 32006|SCC_movies_news_tit3, 32007|SCC_movies_last_added3, 32008|SCC_movies_tv_tips3, 16018|SCC_movies_none3)</onclick>
+					<label2>$VAR[SCC_movies_widget3_label]</label2>
+				</control>
+				<control type="image" id="899"> <!-- Line -->
+					<visible>System.HasAddon(plugin.video.nextup) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
+					<left>0</left>
+					<bottom>135</bottom>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control> 
+				<control type="label" id="898"> <!-- Stream Cinema Community Tv Shows Main Menu Widget -->
+					<visible>Skin.HasSetting(SCC_TVShow_MainMenuWidget)</visible>
+					<textoffsetx>25</textoffsetx>
+					<width>1920</width>
+					<height>70</height>
+					<font>font30_title</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<label>Widget SCC Serialy :</label>
+				</control>
+				<control type="button" id="805"><!-- Setting widget 1 SCC TV Shows -->
+					<visible>Skin.HasSetting(SCC_TVShow_MainMenuWidget)</visible>
+					<label>     - 1.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_tvshows_trends1, 32011|SCC_tvshows_popular1, 32012|SCC_tvshows_most_watch1, 32004|SCC_tvshows_news1, 32005|SCC_tvshows_news_cz1, 32006|SCC_tvshows_news_tit1, 32007|SCC_tvshows_last_added1, 32103|SCC_tvshows_anime1, 16018|SCC_tvshows_none1)</onclick>
+					<label2>$VAR[SCC_tvshows_widget1_label]</label2>
+				</control>
+				<control type="button" id="806"><!-- Setting widget 2 SCC TV Shows -->
+					<visible>Skin.HasSetting(SCC_TVShow_MainMenuWidget) + !Skin.HasSetting(SCC_tvshows_none1)</visible>
+					<label>     - 2.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_tvshows_trends2, 32011|SCC_tvshows_popular2, 32012|SCC_tvshows_most_watch2, 32004|SCC_tvshows_news2, 32005|SCC_tvshows_news_cz2, 32006|SCC_tvshows_news_tit2, 32007|SCC_tvshows_last_added2, 32103|SCC_tvshows_anime2, 16018|SCC_tvshows_none2)</onclick>
+					<label2>$VAR[SCC_tvshows_widget2_label]</label2>
+				</control>
+				<control type="button" id="807"><!-- Setting widget 3 SCC TV Shows -->
+					<visible>Skin.HasSetting(SCC_TVShow_MainMenuWidget)+ !Skin.HasSetting(SCC_tvshows_none1) + !Skin.HasSetting(SCC_tvshows_none2)</visible>
+					<label>     - 3.widget </label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SelectBool(32003, 32010|SCC_tvshows_trends3, 32011|SCC_tvshows_popular3, 32012|SCC_tvshows_most_watch3, 32004|SCC_tvshows_news3, 32005|SCC_tvshows_news_cz3, 32006|SCC_tvshows_news_tit3, 32007|SCC_tvshows_last_added3, 32103|SCC_tvshows_anime3, 16018|SCC_tvshows_none3)</onclick>
+					<label2>$VAR[SCC_tvshows_widget3_label]</label2>
+				</control>
+				<control type="image" id="899"> <!-- Line -->
+					<visible>System.HasAddon(plugin.video.nextup) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
+					<left>0</left>
+					<bottom>135</bottom>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control> 
 			</control>
 			<control type="grouplist" id="600">
 				<top>133</top>
@@ -147,6 +276,63 @@
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(2)</visible>
+				<control type="radiobutton" id="630"> <!-- Next Up Menu Widget -->
+					<visible>System.HasAddon(script.skin.helper.widgets)</visible>
+					<label>Widget Next Up </label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(NextUpMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(NextUpMenuWidget)</onclick>
+				</control>
+				<control type="radiobutton" id="631"> <!-- Stream Cinema Main Menu Widget -->
+					<visible>System.HasAddon(plugin.video.stream-cinema)</visible>
+					<label>Widget Stream-Cinema Cz/Sk </label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SCMainMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(SCMainMenuWidget)</onclick>
+				</control>
+ 				<control type="radiobutton" id="632"> <!-- Stream Cinema Community - Movies Main Menu Widget -->
+		 			<visible>System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
+					<label>Widget Stream Cinema Community - Filmy</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SCC_Movies_MainMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(SCC_Movies_MainMenuWidget)</onclick>
+				</control>
+				<control type="radiobutton" id="633"> <!-- Stream Cinema Community - TV Show Main Menu Widget -->
+					<visible>System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
+					<label>Widget Stream Cinema Community - Seriály </label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SCC_TVShow_MainMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(SCC_TVShow_MainMenuWidget)</onclick>
+				</control>
+				<control type="radiobutton" id="634"> <!-- Trakt Menu Widget -->
+		 			<visible>System.HasAddon(script.module.trakt) | System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
+		 			<label>Widget Trakt.tv - SCC</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(SCC_Trakt_Widget)</selected>
+					<onclick>Skin.ToggleSetting(SCC_Trakt_Widget)</onclick>
+				</control>
+ 				<control type="radiobutton" id="635"> <!-- HBO GO -->
+		 			<visible>System.HasAddon(plugin.video.hbogoeu)</visible>
+					<label>Widget HBO</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(HBOMainMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(HBOMainMenuWidget)</onclick>
+				</control>
+ 				<control type="radiobutton" id="636"> <!-- iPrima Main Menu Widget -->
+		 			<visible>System.HasAddon(plugin.video.iprima.cz)</visible>
+					<label>Widget iPrima</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(iPrimaMenuWidget)</selected>
+					<onclick>Skin.ToggleSetting(iPrimaMenuWidget)</onclick>
+				</control>
+				<control type="image" id="650"> <!-- line -->
+					<visible>System.HasAddon(script.skin.helper.widgets) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.stream-cinema-2-release) | System.HasAddon(plugin.video.stream-cinema) | System.HasAddon(plugin.video.iprima.cz) | System.HasAddon(plugin.video.ivysilani.cz)</visible>
+					<left>0</left>
+					<bottom>135</bottom>
+					<right>0</right>
+					<height>3</height>
+					<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
+				</control> 
 				<control type="radiobutton" id="621">
 					<label>$LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>
@@ -364,6 +550,11 @@
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31061]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5">	<!-- Setting items for widgets -->
+						<visible>Skin.HasSetting(SCC_Movies_MainMenuWidget) | Skin.HasSetting(SCC_TVShow_MainMenuWidget)</visible>
+						<label>$LOCALIZE[32100]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">

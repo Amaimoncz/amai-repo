@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Badge_Rating"> <!-- Badge Rating -->
+        <param name="animation">False</param>
+        <definition>
+            <control type="group">
+                <animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
+                <include content="UserRatingContent" condition="Skin.HasSetting(badge_userrating)">
+                    <param name="infolabel" value="ListItem.UserRating" />
+                </include>
+                <include content="UserRatingContent" condition="Skin.HasSetting(badge_rating)">
+                    <param name="infolabel" value="ListItem.Rating" />
+                </include>
+            </control>
+        </definition>
+    </include>
+    <include name="Circle_Rating"> <!-- Circle Rating -->
+      <control type="image">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <top>-9</top>
+        <left>-10</left>
+        <height>70</height>
+        <width>70</width>
+        <texture background="true" colordiffuse="button_focus">rating_bg.png</texture>
+      </control>
+      <control type="label">
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                <top>-9</top>
+                <left>-10</left>
+               <width>70</width>
+           <height>70</height>
+           <textcolor>white</textcolor>
+                 <label>$INFO[ListItem.Rating]</label>
+                 <font>font25_title</font>
+                 <shadowcolor>text_shadow</shadowcolor>
+               <align>center</align>
+           <aligny>center</aligny>
+          </control>
+    </include> 
+    <include name="UserRatingContent">  <!-- User Rating -->
+        <visible>!String.IsEmpty($PARAM[infolabel])</visible>
+        <control type="image">
+            <left>3</left>
+            <top>-3</top>
+            <width>44</width>
+            <height>44</height>
+            <aspectratio>keep</aspectratio>
+            <texture colordiffuse="button_focus">overlays/badge.png</texture>
+        </control>
+        <control type="label">
+            <left>3</left>
+            <top>-3</top>
+            <align>center</align>
+            <aligny>center</aligny>
+            <width>44</width>
+            <height>44</height>
+            <font>font20_title</font>
+            <label>$INFO[$PARAM[infolabel]]</label>
+        </control>
+    </include>
+    <include name="Tag_Rating"> 	<!-- Tag Rating -->
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <control type="image">
+            <top>17</top>
+            <left>73</left>
+            <width>78</width>
+            <height>78</height>
+            <texture colordiffuse="button_focus">ratings/tag_rating/tag.png</texture>
+        </control>
+        <control type="label">
+            <top>18</top>
+            <left>125</left>
+            <width>78</width>
+            <height>78</height>
+            <angle>-45</angle>
+            <textcolor>white</textcolor>
+            <font>font25_title</font>
+            <shadowcolor>text_shadow</shadowcolor>
+            <label>$INFO[ListItem.Rating]</label>
+        </control>
+    </include>
+    <include name="Tag_Rating_List"> 	<!-- Tag Ratting list view-->
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <control type="image">
+            <top>-73</top>
+            <right>78</right>
+            <width>108</width>
+            <height>108</height>
+            <texture flipy="true" colordiffuse="button_focus">ratings/tag_rating/tag.png</texture>
+        </control>
+        <control type="label">
+            <top>-2</top>
+            <left>230</left>
+            <angle>45</angle>
+            <textcolor>white</textcolor>
+            <font>font30_title</font>
+            <shadowcolor>text_shadow</shadowcolor>
+            <label>$INFO[ListItem.Rating]</label>
+        </control>
+    </include>
+    <include name="Star_Rating"> 	<!-- Star Ratting -->
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <control type="image">
+                <top>17</top>
+                <left>-100</left>
+                <width>250</width>
+                <height>100</height>
+                <texture flipy="true">overlays/overlayfade.png</texture>
+            </control>
+            <control type="image">
+                <left>-45</left>
+                <top>18</top>
+                <height>25</height>
+                <width>140</width>
+                <texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
+            </control>
+    </include>
+    <include name="Star_Rating_List"> 	<!-- Star Rating list view -->
+        <visible>!String.IsEmpty(ListItem.Rating)</visible>
+        <control type="image">
+            <bottom>124</bottom>
+            <left>-252</left>
+            <width>560</width>
+            <height>150</height>
+            <texture>overlays/overlayfade.png</texture>
+        </control>
+        <control type="image">
+            <left>-60</left>
+            <bottom>124</bottom>
+            <height>45</height>
+            <width>190</width>
+            <texture>ratings/star_rating/$INFO[ListItem.Rating].png</texture>
+        </control>
+    </include>
+    <include name="Visible_Right_Fade"> <!-- Animation fade delayed -->
+        <animation type="visible">
+            <effect type="fade" start="0" end="100" time="400" tween="sine" delay="300" easing="out" />
+            <effect type="slide" start="320" end="0" time="400" delay="300" tween="cubic" easing="out" />
+        </animation>
+        <animation type="Hidden">
+            <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+            <effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
+        </animation>	
+    </include>
+    <include name="WidgetGroupListCommonNextUp"> 	<!-- Help widget for Next UP -->
+        <orientation>vertical</orientation>
+        <left>-20</left>
+        <top>0</top>
+        <height>100%</height>
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <itemgap>-160</itemgap>
+        <onup>20000</onup>
+        <ondown>20001</ondown>
+        <usecontrolcoords>true</usecontrolcoords>
+    </include>
+    <include name="WidgetGroupListCommonNew"> 	<!-- Help widget for group list  -->
+        <orientation>vertical</orientation>
+        <left>-20</left>
+        <top>0</top>
+        <height>100%</height>
+        <scrolltime tween="cubic" easing="inout">5500</scrolltime>
+        <itemgap>-160</itemgap>
+        <onup>20000</onup>
+        <ondown>20001</ondown>
+        <usecontrolcoords>true</usecontrolcoords>
+    </include>
+    <include name="CategoryLabelNew"> 	<!-- Category Label New  -->
+          <param name="visible">true</param>
+          <definition>
+              <control type="label" id="$PARAM[list_id]666">
+                <left>90</left>
+                <top>80</top>
+                <width>900</width>
+                <height>90</height>
+                <label>$PARAM[label]</label>
+                <font>font_widget_main</font>
+                <shadowcolor>text_shadow</shadowcolor>
+                <visible>$PARAM[visible]</visible>
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+              </control>
+          </definition>
+    </include>
+    <include name="CategoryLabelNextUp"> 	<!-- Help widget for NextUp  - Label -->
+        <param name="visible">true</param>
+        <definition>
+          <control type="label" id="$PARAM[list_id]666">
+            <left>90</left>
+            <top>50</top>
+            <width>900</width>
+            <height>120</height>
+            <label>$PARAM[label]</label>
+            <textcolor>gold</textcolor>
+            <font>font_widget_main</font>
+            <shadowcolor>text_shadow</shadowcolor>
+            <visible>$PARAM[visible]</visible>
+            <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+          </control>
+        </definition>
+    </include>
+    <include name="WidgetWallCommonNew">  <!-- Help widget for view - WallPoster -->
+        <scrolltime tween="cubic" easing="inout">500</scrolltime>
+        <orientation>vertical</orientation>
+        <onleft>9000</onleft>
+        <onright>noop</onright>
+        <onup>20000</onup>
+        <ondown>20001</ondown>
+        <onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <preloaditems>2</preloaditems>
+    </include>
+    <include name="WidgetWallCommonNextUp"> 	<!-- Help widget for view NextUp WALL -->
+        <scrolltime tween="cubic" easing="out">500</scrolltime>
+        <orientation>vertical</orientation>
+        <onleft>9000</onleft>
+        <onright>noop</onright>
+        <onup>20000</onup>
+        <ondown>20001</ondown>
+        <onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <onback>PageUp</onback>
+        <preloaditems>2</preloaditems>
+    </include>
+    <include name="WidgetWallEpisodeNextUp"> 		<!-- Widget WALL EPISODES for NEXT UP -->
+        <param name="item_limit">15</param>
+        <definition>
+            <include content="CategoryLabelNextUp">
+                <param name="label">$PARAM[widget_header]</param>
+                <param name="list_id" value="$PARAM[list_id]"/>
+            </include>
+            <include content="BusyListSpinner">
+                <param name="list_id" value="$PARAM[list_id]"/>
+                <param name="posy" value="250"/>
+            </include>
+            <control type="panel" id="$PARAM[list_id]">
+                <left>0</left>
+                <top>80</top>
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+                <right>0</right>
+                <height>1000</height>
+                <orientation>vertical</orientation>
+                <include content="WidgetWallCommonNextUp">
+                    <param name="list_id" value="$PARAM[list_id]"/>
+                </include>
+				<itemlayout width="475" height="340">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                      <left>68</left>
+                      <top>10</top>
+                      <include content="InfoWallEpisodeLayoutNextUp">
+                          <param name="focused" value="false" />
+                      </include>
+                  </control>
+                </itemlayout>
+                <focusedlayout width="475" height="340">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                        <depth>DepthContentPopout</depth>
+                        <left>68</left>
+                        <top>10</top>
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <animation type="Unfocus">
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <include content="InfoWallEpisodeLayoutNextUp">
+                            <param name="focused" value="true" />
+                        </include>
+                    </control>
+                </focusedlayout>
+                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+            </control>
+        </definition>
+    </include>
+    <include name="WidgetWallPoster_Trakt"> 	<!-- Widget WALL POSTER Trakt.tv -->
+        <param name="item_limit">150</param> <!-- Number of items -->
+        <param name="list_id" value="$PARAM[list_id]"/>
+        <definition>
+            <include content="BusyListSpinner">
+                <param name="list_id" value="$PARAM[list_id]"/>
+                <param name="posy" value="250"/>
+            </include>
+            <control type="panel" id="$PARAM[list_id]">
+                <left>15</left>
+                <top>115</top>
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+                <right>0</right>
+                <height>1000</height>
+                <orientation>vertical</orientation>
+                <include content="WidgetWallCommonNew">
+                    <param name="list_id" value="$PARAM[list_id]"/>
+                </include>
+                <itemlayout width="345" height="260">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                        <left>68</left>
+                        <top>10</top>
+                        <include content="InfoWall_Trakt">
+                            <param name="focused" value="false" />
+                        </include>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="345" height="260">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                        <depth>DepthContentPopout</depth>
+                        <left>68</left>
+                        <top>10</top>
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <animation type="Unfocus">
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <include content="InfoWall_Trakt">
+                            <param name="focused" value="true" />
+                        </include>
+                    </control>
+                </focusedlayout>
+                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+            </control>
+        </definition>
+    </include>
+    <include name="WidgetInfo"> <!-- Widget Info - Movie/TV Show -->
+        <definition>
+            <control type="grouplist">
+                <left>20</left>
+                <top>10</top>
+                <bottom>40</bottom>
+                <width>440</width>
+                <visible>Control.HasFocus($PARAM[container_id])</visible>
+                <control type="textbox"> <!-- Movie name-->
+                    <left>10</left>
+                    <height>150</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <font>font36_title</font>
+                    <label>[COLOR gold]$INFO[Container($PARAM[container_id]).ListItem.Title][/COLOR] [COLOR gray]($INFO[Container($PARAM[container_id]).ListItem.Year])[/COLOR]</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <autoscroll delay="5000" time="1500" repeat="5000">true</autoscroll>
+                    <visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow)</visible>
+                </control>
+                <control type="textbox"> <!--TV Show name -->
+                    <left>10</left>
+                    <height>150</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>gold</textcolor>
+                    <font>font36_title</font>
+                    <label>[COLOR gold]$INFO[Container($PARAM[container_id]).ListItem.TVShowTitle][/COLOR] [COLOR gray]($INFO[Container($PARAM[container_id]).ListItem.Year])[/COLOR]</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <autoscroll delay="5000" time="1500" repeat="5000">true</autoscroll>
+                    <visible>String.IsEqual(ListItem.DbType,episode)</visible>
+                </control>
+                <control type="textbox"> <!-- Episode of TV Show -->
+                    <left>10</left>
+                    <height>150</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>FF87CEFA</textcolor>
+                    <font>font30_title</font>
+                    <label>$INFO[Container($PARAM[container_id]).ListItem.Label]</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <autoscroll delay="5000" time="1500" repeat="5000">true</autoscroll>
+                    <visible>String.IsEqual(ListItem.DbType,episode)</visible>
+                </control>
+                <control type="label"> <!-- Genre-->
+                    <left>5</left>
+                    <height>60</height>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <scroll>true</scroll>
+                    <autoscroll delay="5000" time="250" repeat="5000">true</autoscroll>
+                    <textcolor>button_focus</textcolor>
+                    <font>font30_title</font>
+                    <label>$INFO[ListItem.Genre]</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <visible>!StringIsEmpty(ListItem.Genre) + !String.IsEqual(ListItem.DbType,episode)</visible>
+                </control>
+                <control type="textbox">
+                    <description>Popis deje textbox</description>
+                    <left>30</left>
+                    <top>0</top>
+                    <height>680</height>
+                    <width>440</width>
+                    <align>justify</align>
+                    <font>font30</font>
+                    <label>$INFO[Container($PARAM[container_id]).ListItem.Plot][CR]</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <autoscroll delay="8000" time="1500" repeat="20000">true</autoscroll>
+                    <visible>!Container($PARAM[container_id]).ListItem.IsCollection</visible>
+                </control>
+                <control type="textbox"> <!-- Label no info -->
+                    <height>700</height>
+                    <font>font30_title</font>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>grey</textcolor>
+                    <label>Nejsou dostupné žádné informace</label>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <autoscroll delay="7000" time="1800" repeat="20000">true</autoscroll>
+                    <visible>String.IsEmpty(Listitem.Plot) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+    <include name="WidgetFavourites"> 		<!-- Widget Favourites New -->
+        <param name="item_limit">30</param>
+        <definition>
+            <include content="BusyListSpinner">
+                <param name="list_id" value="$PARAM[list_id]"/>
+                <param name="posy" value="250"/>
+            </include>
+            <control type="panel" id="$PARAM[list_id]">
+                <left>0</left>
+                <top>80</top>
+                <visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+                <right>0</right>
+                <height>1000</height>
+                <orientation>vertical</orientation>
+                <include content="WidgetWallCommonNew">
+                    <param name="list_id" value="$PARAM[list_id]"/>
+                </include>
+                <itemlayout width="320" height="420">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                        <left>68</left>
+                        <top>10</top>
+                        <include content="Info_Favourites">
+                            <param name="focused" value="false" />
+                        </include>
+                    </control>
+               </itemlayout>
+               <focusedlayout width="320" height="420">
+                    <visible>!String.IsEqual(Container($PARAM[list_id]).ListItem.Title,next)</visible>
+                    <control type="group">
+                        <depth>DepthContentPopout</depth>
+                        <left>68</left>
+                        <top>10</top>
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <animation type="Unfocus">
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+                        </animation>
+                        <include content="Info_Favourites">
+                            <param name="focused" value="true" />
+                        </include>
+                    </control>
+                </focusedlayout>
+                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+            </control>
+        </definition>
+    </include>
+  
+</includes>

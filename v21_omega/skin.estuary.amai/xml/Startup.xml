@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload condition="Skin.HasSetting(delayAtStart)">ReplaceWindow(1111)</onload> <!-- Run window Custom_1111_Startup.xml -->
+	<onload condition="Skin.HasSetting(delayAtStart)">AlarmClock(Skin,ReplaceWindow($INFO[System.StartupWindow]),00:20,silent)</onload> <!-- Delay start Home screen 20s -->
 	<controls />
+		<!-- Set default values if SCC_movies widget is OFF -->
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.SetBool(SCC_movies_none1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.SetBool(SCC_movies_none2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.SetBool(SCC_movies_none3)</onload>
+		<!-- SCC_movies_widget1_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_trends1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_popular1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_most_watch1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_cz1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_tit1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_last_added1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_tv_tips1)</onload>
+		<!-- SCC_movies_widget2_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_trends2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_popular2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_most_watch2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_cz2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_tit2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_last_added2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_tv_tips2)</onload>
+		<!-- SCC_movies_widget3_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_trends3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_popular3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_most_watch3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_cz3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_news_tit3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_last_added3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.Reset(SCC_movies_tv_tips3)</onload>
+		<!-- Set default values if  SCC_tvshows widget is OFF -->
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.SetBool(SCC_tvshows_none1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.SetBool(SCC_tvshows_none2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.SetBool(SCC_tvshows_none3)</onload>
+		<!-- SCC_tvshows_widget1_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_trends1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_popular1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_most_watch1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_cz1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_tit1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_last_added1)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_anime1)</onload>
+		<!-- SCC_tvshows_widget2_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_trends2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_popular2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_most_watch2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_cz2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_tit2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_last_added2)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_anime2)</onload>
+		<!-- SCC_tvshows_widget3_label reset -->
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_trends3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_popular3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_most_watch3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_cz3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_news_tit3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_last_added3)</onload>
+		<onload condition="!Skin.HasSetting(SCC_TVShow_MainMenuWidget)">Skin.Reset(SCC_tvshows_anime3)</onload>
+
+
 </window>
