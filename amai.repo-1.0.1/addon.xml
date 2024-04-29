@@ -1,5 +1,5 @@
 <?xml version="1.0.1" encoding="UTF-8"?>
-<addon id="amai.repo" version="1.0.0" name="Amaimon Repository for Kodi" provider-name="Amaimon">
+<addon id="amai.repo" version="1.0.1" name="Amaimon Repository for Kodi" provider-name="Amaimon">
   <extension point="xbmc.addon.repository" name="Amaimon Repository for Kodi">
     <dir minversion="17.9.0" maxversion="18.9.0">
         <info compressed="false">https://raw.githubusercontent.com/Amaimoncz/amai-repo/main/v18_leia/zips/addons.xml</info>
