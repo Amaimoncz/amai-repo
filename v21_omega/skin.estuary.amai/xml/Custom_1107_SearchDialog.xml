@@ -17,6 +17,12 @@
 			<control type="panel" id="9000">
 				<include>ButtonMenuList</include>
 				<content>
+					<item> <!-- Stream Cinema Community Search ! -->
+						<label>[B] • Vyhledat na SCC • [/B]</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.stream-cinema-2-release)">ActivateWindow(10025,&quot;plugin://plugin.video.stream-cinema-2-release/command/?command=search&quot;,return)</onclick>
+						<visible>System.HasAddon(plugin.video.stream-cinema-2-release)</visible>
+					</item>
 					<item>
 						<label>$LOCALIZE[31113]</label>
 						<onclick>Dialog.Close(all)</onclick>

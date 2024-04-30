@@ -43,11 +43,10 @@
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-			<control type="label"> <!-- Popisek Sx / Ex -->
+			<control type="label"> <!-- Label Sx / Ex -->
 				<left>31</left>
 				<top>178</top>
 				<width>260</width>
-				<!-- <label>$PARAM[thumb_label]</label> -->
 				<label>S$INFO[ListItem.Season,, x E]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
 				<textcolor>gold</textcolor>
@@ -201,7 +200,7 @@
 					<texture  diffuse="special://skin/extras/diffuse_img/diff_550x375.png" colordiffuse="FCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
-				<control type="label">	<!-- Popis dilu total / watched -->
+				<control type="label">	<!-- Label episode total / watched -->
 					<left>30</left>
 					<top>340</top>
 					<width>244</width>
@@ -219,13 +218,13 @@
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
-			<control type="group">	<!-- Zobrazeni hodnoceni badge, circle, star -->
+			<control type="group">	<!-- Rating view badge, circle, star -->
 				<left>134</left>
 				<top>-7</top>
-				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include> 	<!-- Původní hodnocení -->
-				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> 	<!-- Hodnocení v kolečku u widgetů -->
-				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include> 	<!-- Hodnocení hvězdy -->
-				<include condition="Skin.HasSetting(tag_rating)">Tag_Rating</include> 	<!-- Hodnocení hvězdy -->
+				<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include> 	<!-- Badge rating -->
+				<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> 	<!-- Circle rating -->
+				<include condition="Skin.HasSetting(star_rating)">Star_Rating</include> 	<!-- Star rating -->
+				<include condition="Skin.HasSetting(tag_rating)">Tag_Rating</include> 	<!-- Tag rating -->
 			</control>
 			<control type="progress">
 				<left>35</left>
@@ -296,7 +295,7 @@
 			</control>
 		</definition>
 	</include>
-	<include name="InfoWallEpisodeLayoutNextUp"> 	<!-- Widget pro NextUp -->
+	<include name="InfoWallEpisodeLayoutNextUp"> 	<!-- Widget for NextUp -->
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
 		<definition>
@@ -372,7 +371,7 @@
 					<align>center</align>
 				</control>
 			</control>
-			<control type="progress"> 	<!-- Progress bar shlédnuto/ Total -->
+			<control type="progress"> 	<!-- Progress bar watched/ Total -->
 				<left>20</left>
 				<top>203</top>
 				<width>276</width>
@@ -385,14 +384,14 @@
 
 		</definition>
 	</include>
-	<include name="InfoWall_Trakt"> 	<!-- Widget pro Trakt.tv -->
+	<include name="InfoWall_Trakt"> 	<!-- Widget for Trakt.tv -->
 		<param name="fallback_image">defaultmovies.png</param>
 		<param name="main_label">$INFO[ListItem.Artist]</param>
 		<param name="sub_label">$INFO[ListItem.Title]</param>
 		<param name="single_label">$INFO[ListItem.Label]</param>
 		<param name="focused">false</param>
 		<definition>
-			<control type="image"> <!-- Stín za položkou -->
+			<control type="image"> <!-- Shadow behind item -->
 				<top>0</top>
 				<width>332</width>
 				<height>270</height>

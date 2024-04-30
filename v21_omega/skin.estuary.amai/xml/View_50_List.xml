@@ -64,6 +64,15 @@
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
+						<left>290</left>
+						<top>936</top>
+						<include condition="Skin.HasSetting(badge_rating) | Skin.HasSetting(badge_userrating)">Badge_Rating</include> <!-- Badge rating-->
+						<include condition="Skin.HasSetting(circle_rating)">Circle_Rating</include> <!-- Circle rating -->
+						<include condition="Skin.HasSetting(star_rating)">Star_Rating_List</include> <!-- Star rating -->
+						<include condition="Skin.HasSetting(tag_rating)">Tag_Rating_List</include> <!-- Tag rating -->
+					</control>
+
+					<control type="group">	<!-- Old rating -->
 						<left>291</left>
 						<top>950</top>
 						<include content="RatingCircle">
