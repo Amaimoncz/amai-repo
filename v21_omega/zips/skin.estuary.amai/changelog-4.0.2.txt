@@ -1,0 +1,10 @@
+[B]4.0.2[/B]
+-> Add search SCC dialog
+-> simple shutdown menu
+-> Add rating in list view
+
+[B]4.0.1[/B]
+-> Update widgets
+
+[B]4.0.0[/B]
+-> Initial version v21 Omega
