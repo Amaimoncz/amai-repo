@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
-	<onload>RunScript(special://skin/script/startupprogressbar.py)</onload>
+	<onload>RunScript(special://skin/script/startupprogressbar.py,$INFO[Skin.String(Skin_DelayOnStart)])</onload>
 <controls>
-  <control type="image"> <!-- Pozadí tapeta -->
+  <control type="image"> <!-- Background wallpaper -->
     <left>0</left>
     <right>0</right>
     <bottom>0</bottom>

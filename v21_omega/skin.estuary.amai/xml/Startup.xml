@@ -2,7 +2,7 @@
 <window>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload condition="Skin.HasSetting(delayAtStart)">ReplaceWindow(1111)</onload> <!-- Run window Custom_1111_Startup.xml -->
-	<onload condition="Skin.HasSetting(delayAtStart)">AlarmClock(Skin,ReplaceWindow($INFO[System.StartupWindow]),00:20,silent)</onload> <!-- Delay start Home screen 20s -->
+	<onload condition="Skin.HasSetting(delayAtStart)">AlarmClock(Skin,ReplaceWindow($INFO[System.StartupWindow]),00:$VAR[SkinSet_DelayOnStart],silent)</onload> <!-- Delay start Home screen 20s -->
 	<controls />
 		<!-- Set default values if SCC_movies widget is OFF -->
 		<onload condition="!Skin.HasSetting(SCC_Movies_MainMenuWidget)">Skin.SetBool(SCC_movies_none1)</onload>

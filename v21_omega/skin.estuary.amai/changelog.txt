@@ -1,3 +1,9 @@
+[B]4.0.3[/B]
+-> add player debug and process info
+-> fix default colors
+-> add setting for max widget items
+-> fix delay time on start
+
 [B]4.0.2[/B]
 -> Add search SCC dialog
 -> simple shutdown menu

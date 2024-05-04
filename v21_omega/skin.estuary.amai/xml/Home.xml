@@ -1033,19 +1033,19 @@
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>50010</pagecontrol>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_Movies_MainMenuWidget) + !Skin.HasSetting(SCC_movies_none1)">
-							<param name="content_path" value="$VAR[SCC_movies_path1]"/>
+							<param name="content_path" value="$VAR[SCC_movies_path1];,return"/>
 							<param name="widget_header" value="$VAR[SCC_movies_widget1_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="50100"/>
 						</include>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_Movies_MainMenuWidget) + !Skin.HasSetting(SCC_movies_none2)">
-							<param name="content_path" value="$VAR[SCC_movies_path2]"/>
+							<param name="content_path" value="$VAR[SCC_movies_path2];,return"/>
 							<param name="widget_header" value="$VAR[SCC_movies_widget2_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="50200"/>
 						</include>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_Movies_MainMenuWidget) + !Skin.HasSetting(SCC_movies_none3)">
-							<param name="content_path" value="$VAR[SCC_movies_path3]"/>
+							<param name="content_path" value="$VAR[SCC_movies_path3];,return"/>
 							<param name="widget_header" value="$VAR[SCC_movies_widget3_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="50300"/>
@@ -1064,19 +1064,19 @@
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>51010</pagecontrol>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_TVShow_MainMenuWidget) + !Skin.HasSetting(SCC_tvshows_none1)">
-							<param name="content_path" value="$VAR[SCC_tvshows_path1]"/>
+							<param name="content_path" value="$VAR[SCC_tvshows_path1];,return"/>
 							<param name="widget_header" value="$VAR[SCC_tvshows_widget1_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="51100"/>
 						</include>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_TVShow_MainMenuWidget) + !Skin.HasSetting(SCC_tvshows_none2)">
-							<param name="content_path" value="$VAR[SCC_tvshows_path2]"/>
+							<param name="content_path" value="$VAR[SCC_tvshows_path2];,return"/>
 							<param name="widget_header" value="$VAR[SCC_tvshows_widget2_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="51200"/>
 						</include>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(SCC_TVShow_MainMenuWidget) + !Skin.HasSetting(SCC_tvshows_none3)">
-							<param name="content_path" value="$VAR[SCC_tvshows_path3]"/>
+							<param name="content_path" value="$VAR[SCC_tvshows_path3];,return"/>
 							<param name="widget_header" value="$VAR[SCC_tvshows_widget3_label]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="51300"/>

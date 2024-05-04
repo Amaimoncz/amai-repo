@@ -298,6 +298,14 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>!System.SupportsCPUUsage</visible>
 				</control>
+				<control type="label"><!-- Memory & Buffer Cache level-->
+					<width>1900</width>
+					<height>50</height>
+					<aligny>bottom</aligny>
+					<label>$INFO[System.Memory(used.percent),[COLOR button_focus]$LOCALIZE[31030]:[/COLOR] ,       ]$INFO[Player.CacheLevel,[COLOR button_focus]Buffer Cache : [/COLOR],%]</label>
+					<font>font14</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
 			</control>
 			<control type="grouplist" id="5550">
 				<right>15</right>

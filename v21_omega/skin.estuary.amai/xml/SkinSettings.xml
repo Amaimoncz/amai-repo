@@ -67,6 +67,12 @@
 					<onclick>Skin.SelectBool(31024, 16018|circle_none, 563|badge_rating, 32106|tag_rating, 32104|circle_rating, 32105|star_rating, 38018|badge_userrating,)</onclick>
 					<label2>$VAR[RatingSettingLabel2Var]</label2>
 				</control>
+				<control type="button" id="716">	<!-- Widget Items limit setting -->
+					<label>$LOCALIZE[32131]</label>
+					<label2>$VAR[SkinSet_widgetItemsLimit]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetNumeric(Skin_widgetItemLimit)</onclick>
+				</control>
 				<control type="button" id="707">
 					<label>$LOCALIZE[31164]</label>
 					<include>DefaultSettingButton</include>
@@ -113,6 +119,16 @@
 					<onclick>Skin.ToggleSetting(delayAtStart)</onclick>
 					<selected>Skin.HasSetting(delayAtStart)</selected>
 				</control>
+				<control type="button" id="715">
+					<label>$LOCALIZE[32130]</label>
+					<label2>$VAR[SkinSet_DelayOnStart]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetNumeric(Skin_DelayOnStart)</onclick>
+					<visible>Skin.HasSetting(delayAtStart)</visible>
+				</control>
+
+
+
 			</control>
 			<control type="grouplist" id="800">	<!-- Settings for widgets -->
 				<top>160</top>

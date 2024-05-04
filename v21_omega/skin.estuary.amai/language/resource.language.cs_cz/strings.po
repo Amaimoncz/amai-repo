@@ -877,3 +877,16 @@ msgstr "Vyčistit knihovnu"
 msgctxt "#32126"
 msgid "Player Debug Info"
 msgstr "Player Debug Info"
+
+msgctxt "#32130"
+msgid " - Delay on start Kodi"
+msgstr " - čas zpoždění startu Kodi "
+
+msgctxt "#32131"
+msgid "Widgets item limit"
+msgstr "Počet zobrazených položek u widgetů "
+
+msgctxt "#32132"
+msgid "Player process info"
+msgstr "Informace o zpracování přehrávače"
+

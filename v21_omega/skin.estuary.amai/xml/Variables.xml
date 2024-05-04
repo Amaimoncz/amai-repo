@@ -358,6 +358,8 @@
 		<value condition="Control.HasFocus(70054) + Playlist.IsRandom">$LOCALIZE[590]: $LOCALIZE[16041]</value>
 		<value condition="Control.HasFocus(70054)">$LOCALIZE[590]: $LOCALIZE[16039]</value>
 		<value condition="Control.HasFocus(70055)">$LOCALIZE[24013]</value>
+		<value condition="Control.HasFocus(99050)">$LOCALIZE[32132]</value>	<!-- Player process info label OSD -->
+		<value condition="Control.HasFocus(99051)">$LOCALIZE[32126]</value>	<!-- Player debug info label OSD -->
 	</variable>
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
@@ -1005,6 +1007,14 @@
 	<variable name="Trakt_path">
 		<value>plugin://plugin.video.stream-cinema-2-release/trakt/list?id=11908081&amp;user=amaimon</value>
 	</variable>
-	
-
+<!-- Delay on Start - Time -->
+	<variable name="SkinSet_DelayOnStart"> 
+		<value condition="!String.IsEmpty(Skin.String(Skin_DelayOnStart))">$INFO[Skin.String(Skin_DelayOnStart)]</value>
+		<value condition="String.IsEmpty(Skin.String(Skin_DelayOnStart))">5</value> <!-- Default value -->
+	</variable>
+<!-- Number of items for widgets -->
+	<variable name="SkinSet_widgetItemsLimit"> 
+		<value condition="!String.IsEmpty(Skin.String(Skin_widgetItemLimit))">$INFO[Skin.String(Skin_widgetItemLimit)]</value>
+		<value condition="String.IsEmpty(Skin.String(Skin_widgetItemLimit))">15</value> <!-- Default value -->
+	</variable>
 </includes>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.amai" version="4.0.2" name="Estuary Amaimon Mod" provider-name="phil65, Ichabod Fletchman, Amaimon">
+<addon id="skin.estuary.amai" version="4.0.3" name="Estuary Amaimon Mod" provider-name="phil65, Ichabod Fletchman, Amaimon">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>

@@ -161,6 +161,20 @@
 						<onclick>ActivateWindow(PVROSDChannels)</onclick>
 						<visible>VideoPlayer.Content(livetv)</visible>
 					</control>
+					<control type="radiobutton" id="99050"><!-- Player proces info button -->
+						<include content="OSDButton">
+							<param name="texture" value="defaultaddontvinfo.png"/>
+						</include>
+						<onclick>PlayerProcessInfo</onclick>
+						<visible>Skin.HasSetting(videoplayer_debug_mode)</visible>
+					</control>
+					<control type="radiobutton" id="99051"><!-- Player debug info button -->
+						<include content="OSDButton">
+							<param name="texture" value="icons/others/sysinfo.png"/>
+						</include>
+						<onclick>PlayerDebug</onclick>
+						<visible>Skin.HasSetting(videoplayer_debug_mode)</visible>
+					</control>
 					<control type="radiobutton" id="70041">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/guide.png"/>
