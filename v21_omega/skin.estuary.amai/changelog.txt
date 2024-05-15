@@ -1,3 +1,7 @@
+[B]4.0.4[/B]
+-> fix delay on start
+-> fix path for SCC widgets  
+
 [B]4.0.3[/B]
 -> add player debug and process info
 -> fix default colors
